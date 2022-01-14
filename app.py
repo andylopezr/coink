@@ -7,9 +7,6 @@ import os
 # Initializing app
 app = Flask(__name__)
 
-# Using secret key for flash messages
-app.config['SECRET_KEY'] = '2496c6d62b0c524876c5e05ce420677651e7e38bd0383609'
-
 fields = [{'name': '',
              'email': '',
              'city': ''},
@@ -17,9 +14,10 @@ fields = [{'name': '',
 
 homedir = os.path.abspath(os.path.dirname(__file__))
             
-# Database location
+# Database location + secret key for flash messages
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(homedir, 'db.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = '2496c6d62b0c524876c5e05ce420677651e7e38bd0383609'
 
 # Initializing DB
 db = SQLAlchemy(app)
@@ -39,6 +37,8 @@ class Form(db.Model):
         self.email = email
         self.city = city
 
+db.create_all()
+
 # Form Schema
 class FormSchema(ma.Schema):
     class Meta:
@@ -53,28 +53,7 @@ forms_schema = FormSchema(many=True)
 def index():
     return render_template('index.html', fields=fields)
 
-# Route to get user fields
-@app.route('/post', methods=['POST'])
-def add_fields():
-    name = request.json['name']
-    email = request.json['email']
-    city = request.json['city']
-
-    new_reg = Form(name, email, city)
-
-    db.session.add(new_reg)
-    db.session.commit()
-
-    return form_schema.jsonify(new_reg)
-
-# Get all regs
-@app.route('/get', methods=['GET'])
-def get_all():
-    all_regs = Form.query.all()
-    result = forms_schema.dump(all_regs)
-    return jsonify(result)
-
-# Obtain data from form
+# Obtain form data
 
 @app.route('/create/', methods=('GET', 'POST'))
 def create():
@@ -98,6 +77,13 @@ def create():
 
     return render_template('create.html')
 
+
+# Get all regs
+@app.route('/get', methods=['GET'])
+def get_all():
+    all_regs = Form.query.all()
+    result = forms_schema.dump(all_regs)
+    return jsonify(result)
 
 # Run Server
 if __name__ == '__main__':
