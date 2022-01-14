@@ -28,15 +28,16 @@ ma = Marshmallow(app)
 # Form Model
 class Form(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), unique=True, nullable=False)
-    email = db.Column(db.String(100), unique=True, nullable=False)
-    city = db.Column(db.String(100), nullable=False)
+    name = db.Column(db.String(50), unique=True, nullable=False)
+    email = db.Column(db.String(50), unique=True, nullable=False)
+    city = db.Column(db.String(50), nullable=False)
 
     def __init__(self, name, email, city):
         self.name = name
         self.email = email
         self.city = city
 
+# Creates the DB
 db.create_all()
 
 # Form Schema
@@ -54,7 +55,6 @@ def index():
     return render_template('index.html', fields=fields)
 
 # Obtain form data
-
 @app.route('/create/', methods=('GET', 'POST'))
 def create():
     if request.method == 'POST':
@@ -73,13 +73,15 @@ def create():
             new_reg = Form(name, email, city)
             db.session.add(new_reg)
             db.session.commit()
-            return redirect(url_for('index'))
+            with open("log.txt", "a") as f:
+                return f.write("{} - {} \n".format(name, datetime.now()))
+            return render_template('create.html')
 
     return render_template('create.html')
 
 
 # Get all regs
-@app.route('/get', methods=['GET'])
+@app.route('/all', methods=['GET'])
 def get_all():
     all_regs = Form.query.all()
     result = forms_schema.dump(all_regs)
