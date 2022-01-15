@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Users {% endblock %}</h1>
+    <h1>{% block title %} Last User Created {% endblock %}</h1>
     {% for field in fields %}
         <div class='field'>
-            <h3>{{ field['name'] }}</h3>
+            <h2>{{ field['name'] }}</h2>
             <h4>{{ field['email'] }}</h4>
             <h4>{{ field['city'] }}</h4>
         </div>
