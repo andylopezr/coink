@@ -1,28 +1,32 @@
 # REST API With Flask & SQL Alchemy
 
+<img src="https://www.ncrts.com/public/images/webapp-banner.jpg">
 > Form Database API using Python Flask, SQL Alchemy and Marshmallow
 
 ## Quick Start Using Pipenv
 
 ``` bash
-# Activate venv
-$ pipenv shell
-
-# Install dependencies
-$ pipenv install
-
-# Create DB
-$ python
->> from app import db
->> db.create_all()
->> exit()
-
 # Run Server (http://localhost:5000)
 python app.py
 ```
 
 ## Endpoints
 
-* GET     /get
+* GET     /all
 * GET     /create
 * POST    /create
+
+## Technologies
+
+* HTML5
+* CSS
+* Python
+* SQLAlchemy
+* Flask
+* Marshmallow
+
+## Authors
+Andres Lopez - [Github](https://github.com/andylopezr) / [Twitter](https://twitter.com/_andy_lopez_)
+
+## License
+Public Domain. No copyright protection.
