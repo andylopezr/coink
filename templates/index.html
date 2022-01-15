@@ -1,12 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Last User Created {% endblock %}</h1>
-    {% for field in fields %}
-        <div class='field'>
-            <h2>{{ field['name'] }}</h2>
-            <h4>{{ field['email'] }}</h4>
-            <h4>{{ field['city'] }}</h4>
-        </div>
-    {% endfor %}
+    <h1>{% block title %} Welcome {% endblock %}</h1>
+    <div>
+        To fill out the form click on the create link in the navigation bar.
+    </div>
 {% endblock %}
