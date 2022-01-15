@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from datetime import datetime
 import os
+import logging
 
 # Initializing app
 app = Flask(__name__)
@@ -13,7 +14,7 @@ fields = [{'name': '',
             ]
 
 homedir = os.path.abspath(os.path.dirname(__file__))
-            
+        
 # Database location + secret key for flash messages
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(homedir, 'db.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -73,8 +74,13 @@ def create():
             new_reg = Form(name, email, city)
             db.session.add(new_reg)
             db.session.commit()
-            with open("log.txt", "a") as f:
-                return f.write("{} - {} \n".format(name, datetime.now()))
+            dt = datetime.now()
+            #with open("log.txt", "a") as f:
+                #return f.write("{} - {} \n".format(name, dt))
+            # Logging config
+            logging.basicConfig(filename='creation.log', encoding='utf-8', level=logging.DEBUG)
+            logging.info('{} - {} \n'.format(name, dt))
+
             return render_template('create.html')
 
     return render_template('create.html')
