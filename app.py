@@ -73,14 +73,14 @@ def create():
             fields.append({'name': name, 'email': email, 'city': city})
             new_reg = Form(name, email, city)
             db.session.add(new_reg)
-            db.session.commit()
-            dt = datetime.now()
-            #with open("log.txt", "a") as f:
-                #return f.write("{} - {} \n".format(name, dt))
-            # Logging config
-            logging.basicConfig(filename='creation.log', encoding='utf-8', level=logging.DEBUG)
-            logging.info('{} - {} \n'.format(name, dt))
-
+            try:
+                db.session.commit()
+                # Logging user creation event
+                logging.basicConfig(filename='creation.log', encoding='utf-8', level=logging.DEBUG)
+                logging.info('{} - {} \n'.format(name, datetime.now()))
+            except Exception as e:
+                #logging
+                flash('Name or Email already exists')
             return render_template('create.html')
 
     return render_template('create.html')
@@ -90,8 +90,8 @@ def create():
 @app.route('/all', methods=['GET'])
 def get_all():
     all_regs = Form.query.all()
-    result = forms_schema.dump(all_regs)
-    return jsonify(result)
+    results = forms_schema.dump(all_regs)
+    return render_template('all.html', results=results)
 
 # Run Server
 if __name__ == '__main__':
