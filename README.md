@@ -3,7 +3,7 @@
 <img src="https://www.ncrts.com/public/images/webapp-banner.jpg">
 > Form Database API using Python Flask, SQL Alchemy and Marshmallow
 
-## Quick Start Using Pipenv
+## How to run it
 
 ``` bash
 # Run Server (http://localhost:5000)
