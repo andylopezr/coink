@@ -87,8 +87,8 @@ def create():
 
 
 # Get all regs
-@app.route('/all', methods=['GET'])
-def get_all():
+@app.route('/all/', methods=['GET'])
+def all():
     all_regs = Form.query.all()
     results = forms_schema.dump(all_regs)
     return render_template('all.html', results=results)
