@@ -76,10 +76,10 @@ def create():
             try:
                 db.session.commit()
                 # Logging user creation event
-                logging.basicConfig(filename='creation.log', encoding='utf-8', level=logging.DEBUG)
+                logging.basicConfig(filename='creation.log', encoding='utf-8', level=logging.NOTSET)
                 logging.info('{} - {} \n'.format(name, datetime.now()))
             except Exception as e:
-                #logging
+                # logging
                 flash('Name or Email already exists')
             return render_template('create.html')
 
