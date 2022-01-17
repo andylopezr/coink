@@ -80,7 +80,7 @@ def create():
                 logging.info('{} - {} \n'.format(name, datetime.now()))
             except Exception as e:
                 # logging
-                flash('Name or Email already exists')
+                flash('Name or Email already on record')
             return render_template('create.html')
 
     return render_template('create.html')
