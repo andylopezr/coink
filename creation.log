@@ -1,0 +1,47 @@
+INFO:root:Jimmy Fallonaddee - 2022-01-14 23:24:53.159947 
+
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:24:53] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:01] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/andy/coink/app.py', reloading
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:23] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:26] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:28] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:29] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/andy/coink/app.py', reloading
+INFO:root:Jimmy FallonaddeeEEXX - 2022-01-14 23:25:45.887717 
+
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:45] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:55] "GET /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jan/2022 23:25:56] "GET /all/ HTTP/1.1" 200 -
+INFO:root:Calvin Klein - 2022-01-15 09:56:40.819393 
+
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 09:56:40] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 09:57:05] "GET / HTTP/1.1" 200 -
+INFO:root:Paola Leaño - 2022-01-15 10:48:32.452817 
+
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:48:32] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:48:34] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:48:40] "GET /all/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:48:48] "GET /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:48:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:49:33] "GET /all/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:51:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:52:05] "GET /all/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:52:26] "GET /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:52:46] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:52:52] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:52:57] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Jan/2022 10:53:06] "POST /create/ HTTP/1.1" 200 -
+INFO:root:c - 2022-01-17 13:37:16.084749 
+
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 13:37:16] "POST /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:09:32] "GET /all/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:09:34] "GET /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:09:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:09:45] "GET /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:09:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:10:22] "GET /create/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:10:42] "GET /all/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:11:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Jan/2022 14:11:25] "GET /create/ HTTP/1.1" 200 -
