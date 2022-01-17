@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %} - Users</title>
     <style>
+        html {
+            font-family: 'Epilogue', sans-serif;
+        }
+        img {
+            max-width: 30%;
+            height: auto;
+        }
         .message {
             padding: 10px;
             margin: 5px;
             background-color: #f3f3f3
         }
+        nav {
+            background-color: #003336;
+            padding: 0px;
+            margin: 0px;
+        }
         nav a {
-            color: #d64161;
-            font-size: 3em;
+            color: #1EEB00;
+            font-size: 1.8em;
             margin-left: 50px;
             text-decoration: none;
         }
@@ -19,8 +31,31 @@
         .alert {
             padding: 20px;
             margin: 5px;
-            color: #970020;
-            background-color: #ffd5de;
+            color: #003336;
+            background-color: #1EEB00;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            color: #003336;
+            padding: 0;
+        }
+
+        button {
+            margin-top: 1em;
+            background-color: #1EEB00;
+            color: #003336;;
+        }
+
+        h1 {
+            color: #004B40;
+        }
+        .home{
+            padding-top: 1em;
         }
     </style>
 </head>

@@ -2,8 +2,8 @@
 
 {% block content %}
     <h1>{% block title %} Welcome {% endblock %}</h1>
-    <img src="" alt="">
-    <div>
-        To fill out the form click on the create link in the navigation bar.
+    <img src="https://coink.com/wp-content/uploads/2021/09/logo-coink-lateral.svg" alt="coink logo">
+    <div class="home">
+        To fill out the form click <a href="{{ url_for('create') }}">here</a> or on the create tab.
     </div>
 {% endblock %}
