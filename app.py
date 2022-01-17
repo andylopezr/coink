@@ -5,14 +5,8 @@ from datetime import datetime
 import os
 import logging
 
-# Initializing app
+# Initializes app
 app = Flask(__name__)
-
-fields = [{'name': '',
-             'email': '',
-             'city': ''},
-            ]
-
 homedir = os.path.abspath(os.path.dirname(__file__))
         
 # Database location + secret key for flash messages
@@ -20,10 +14,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(homedir, 'db
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = '2496c6d62b0c524876c5e05ce420677651e7e38bd0383609'
 
-# Initializing DB
+# Initializes DB
 db = SQLAlchemy(app)
 
-# Initializing Marshmallow
+# Initializes Marshmallow
 ma = Marshmallow(app)
 
 # Form Model
@@ -38,7 +32,7 @@ class Form(db.Model):
         self.email = email
         self.city = city
 
-# Creates the DB
+# Creates DB
 db.create_all()
 
 # Form Schema
@@ -46,14 +40,14 @@ class FormSchema(ma.Schema):
     class Meta:
        fields = ('id', 'name', 'email', 'city')
 
-# Initializing Schema
+# Initialize Schema
 form_schema = FormSchema()
 forms_schema = FormSchema(many=True)
 
-# Displaying index
+# Display index
 @app.route('/')
 def index():
-    return render_template('index.html', fields=fields)
+    return render_template('index.html')
 
 # Obtain form data
 @app.route('/create/', methods=('GET', 'POST'))
@@ -70,7 +64,6 @@ def create():
         elif not city:
             flash('City is required')
         else:
-            fields.append({'name': name, 'email': email, 'city': city})
             new_reg = Form(name, email, city)
             db.session.add(new_reg)
             try:
@@ -84,7 +77,6 @@ def create():
             return render_template('create.html')
 
     return render_template('create.html')
-
 
 # Get all regs
 @app.route('/all/', methods=['GET'])
