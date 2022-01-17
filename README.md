@@ -13,6 +13,11 @@ pipenv install
 python app.py
 ```
 
+## Screenshots
+<img src="https://i.imgur.com/9Ejx0tt.png">
+<img src="https://i.imgur.com/Xtv8TGj.png">
+<img src="https://i.imgur.com/sbpoPGX.png">
+
 ## Endpoints
 
 * GET /             - Homepage
