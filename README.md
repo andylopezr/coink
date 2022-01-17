@@ -1,7 +1,7 @@
 # REST API With Flask & SQL Alchemy
 
 <img src="https://www.ncrts.com/public/images/webapp-banner.jpg">
-> Form Database API using Python Flask, SQL Alchemy and Marshmallow
+> Form Database API using Python Flask, SQL Alchemy and Marshmallow for Coink
 
 ## How to run it
 
@@ -12,9 +12,10 @@ python app.py
 
 ## Endpoints
 
-* GET     /all
-* GET     /create
-* POST    /create
+* GET /             - Homepage
+* GET     /all      - Get all records
+* GET     /create   - Creation page
+* POST    /create   - Form data stored
 
 ## Technologies
 
