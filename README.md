@@ -1,7 +1,7 @@
 # REST API With Flask & SQL Alchemy
 
 <img src="https://www.ncrts.com/public/images/webapp-banner.jpg">
-> Form Database API using Python, Flask, SQL Alchemy and Marshmallow for Coink to register 3 fields, store the regs in a SQLite db and logs the creation event in the creation.log file
+> Form Database API using Python, Flask, SQL Alchemy and Marshmallow for Coink to register 3 fields, store the regs in a SQLite db and logs the creation event in the creation.log file.
 
 ## How to run it
 
